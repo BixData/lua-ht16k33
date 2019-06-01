@@ -60,13 +60,30 @@ matrix:setBlink(ht16k33.BlinkRate.2_HZ)
 
 ## Using Raw API
 
-### Turn on all LEDs
+### Turn on oscillator
 
 ```lua
 local ht16k33 = require 'ht16k33'
 local periphery = require 'periphery'
 
 local i2c = periphery.I2C('/dev/i2c-1')
+local msgs = {{bit32.bor(ht16k33.Command.SYSTEM_SETUP, ht16k33.OSCILLATOR)}}
+i2c:transfer(device, msgs)
+```
+
+### Turn on display
+
+```lua
+local ht16k33 = require 'ht16k33'
+local periphery = require 'periphery'
+
+local i2c = periphery.I2C('/dev/i2c-1')
+ht16k33.setBlink(i2c, device, ht16k33.BlinkRate.OFF)
+```
+
+### Turn on all LEDs
+
+```lua
 local buf = {}
 for i=1,16 do buf[#buf+1] = 0xff end
 ht16k33.writeBuffer(i2c, nil, led, buf)
