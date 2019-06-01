@@ -21,6 +21,7 @@ dependencies = {
 build = {
    type = "builtin",
    modules = {
-      ht16k33 = "src/ht16k33.lua"
+      ht16k33                = "src/ht16k33.lua",
+      ["ht16k33.matrix_8x8"] = "src/ht16k33/matrix_8x8.lua"
    }
 }
