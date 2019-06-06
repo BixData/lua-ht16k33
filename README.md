@@ -4,6 +4,16 @@
 
 A [lua-periphery](https://github.com/vsergeev/lua-periphery) based sensor driver for the HT16K33 LED matrix controller.
 
+## Installing
+
+If you are on Linux:
+
+```sh
+$ luarocks install ht16k33
+```
+
+Otherwise, you can use the Lua module from within a Go app via [glua-periphery](https://github.com/BixData/gluaperiphery).
+
 ## Using 8x8 Matrix API
 
 A matrix facade encapsulates a 16-byte display buffer and provides buffer accessors for drawing pixels using convenient [x,y] coordinates. Calling the matrix `write()` function transfers the buffer to the HT16K33.
