@@ -1,8 +1,8 @@
 package = "ht16k33"
-version = "0.1.0-0"
+version = "0.1.0-1"
 source = {
-   url = "https://github.com/BixData/lua-ht16k33/archive/0.1.0-0.tar.gz",
-   dir = "ht16k33-0.1.0-0"
+   url = "https://github.com/BixData/lua-ht16k33/archive/0.1.0-1.tar.gz",
+   dir = "lua-ht16k33-0.1.0-1"
 }
 description = {
    summary = "HT16K33 LED matrix driver",
