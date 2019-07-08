@@ -1,7 +1,7 @@
 package = "ht16k33"
 version = "0.1.0-1"
 source = {
-   url = "https://github.com/BixData/lua-ht16k33/archive/0.1.0-1.tar.gz",
+   url = "https://github.com/nubix-io/lua-ht16k33/archive/0.1.0-1.tar.gz",
    dir = "lua-ht16k33-0.1.0-1"
 }
 description = {
@@ -9,7 +9,7 @@ description = {
    detailed = [[
      The Holtek HT16K33 is a memory mapping and multi-function LED controller driver. 
    ]],
-   homepage = "https://github.com/BixData/lua-ht16k33",
+   homepage = "https://github.com/nubix-io/lua-ht16k33",
    maintainer = "David Rauschenbach",
    license = "MIT"
 }
