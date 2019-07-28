@@ -65,7 +65,7 @@ matrix:setBrightness(7)
 ### Setup blinking display
 
 ```lua
-matrix:setBlink(ht16k33.BlinkRate.2_HZ)
+matrix:setBlink(ht16k33.BlinkRate['2_HZ'])
 ```
 
 ## Using Raw API
@@ -88,6 +88,7 @@ local ht16k33 = require 'ht16k33'
 local periphery = require 'periphery'
 
 local i2c = periphery.I2C('/dev/i2c-1')
+local device = 0x70
 ht16k33.setBlink(i2c, device, ht16k33.BlinkRate.OFF)
 ```
 
@@ -96,7 +97,7 @@ ht16k33.setBlink(i2c, device, ht16k33.BlinkRate.OFF)
 ```lua
 local buf = {}
 for i=1,16 do buf[#buf+1] = 0xff end
-ht16k33.writeBuffer(i2c, nil, led, buf)
+ht16k33.writeBuffer(i2c, nil, buf)
 ```
 
 ### Turn off all LEDs
@@ -120,5 +121,5 @@ ht16k33.setBrightness(i2c, 0x71, 7)
 ### Setup blinking display
 
 ```lua
-ht16k33.setBlink(i2c, nil, ht16k33.BlinkRate.2_HZ)
+ht16k33.setBlink(i2c, nil, ht16k33.BlinkRate['2_HZ'])
 ```
