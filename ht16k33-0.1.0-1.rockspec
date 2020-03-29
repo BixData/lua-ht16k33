@@ -7,10 +7,10 @@ source = {
 description = {
    summary = "HT16K33 LED matrix driver",
    detailed = [[
-     The Holtek HT16K33 is a memory mapping and multi-function LED controller driver. 
+     The Holtek HT16K33 is a memory mapping and multi-function LED controller driver.
    ]],
    homepage = "https://github.com/nubix-io/lua-ht16k33",
-   maintainer = "David Rauschenbach",
+   maintainer = "Nubix Inc.",
    license = "MIT"
 }
 dependencies = {
